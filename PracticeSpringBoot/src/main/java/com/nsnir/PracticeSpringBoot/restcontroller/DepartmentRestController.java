@@ -2,6 +2,7 @@ package com.nsnir.PracticeSpringBoot.restcontroller;
 
 import com.nsnir.PracticeSpringBoot.entity.Department;
 import com.nsnir.PracticeSpringBoot.service.DepartmentService;
+import com.nsnir.PracticeSpringBoot.service.FacultyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/dep/api")
+@CrossOrigin("*")
+
 public class DepartmentRestController {
 
     @Autowired
     private DepartmentService departmentService;
+
 
     @GetMapping("/view")
     public List<Department> getAllDepartments() {

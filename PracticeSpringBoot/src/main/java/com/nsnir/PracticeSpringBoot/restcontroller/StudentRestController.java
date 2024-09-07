@@ -2,6 +2,7 @@ package com.nsnir.PracticeSpringBoot.restcontroller;
 
 
 import com.nsnir.PracticeSpringBoot.entity.Student;
+import com.nsnir.PracticeSpringBoot.service.DepartmentService;
 import com.nsnir.PracticeSpringBoot.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ public class StudentRestController {
 
     @Autowired
     private StudentService studentService;
+
 
     @GetMapping("/view")
     private List<Student> getAllStudents() {

@@ -17,6 +17,10 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique=true, nullable=false, length=50)
+    @Column( nullable = false, length = 50)
     private String name;
+
+    @JoinColumn(name = "facId")
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private Faculty faculty;
 }

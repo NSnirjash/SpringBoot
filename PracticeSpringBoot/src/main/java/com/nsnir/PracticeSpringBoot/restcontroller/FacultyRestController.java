@@ -27,12 +27,12 @@ public class FacultyRestController {
         facultyService.saveFaculty(faculty);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public void updateFaculty(@PathVariable ("id") int id, @RequestBody Faculty faculty){
         facultyService.updateFaculty(faculty, id);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void deleteFaculty(@PathVariable int  id){
         facultyService.deleteFaculty(id);
     }
